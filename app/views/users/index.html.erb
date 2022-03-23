@@ -1,0 +1,13 @@
+<h1>User index</h1>
+<table>
+  <% @users.each do |user| %>
+  <tr>
+    <td>
+      <%= link_to user_path(user.id) do %>
+        <%= image_tag user.get_profile_image(100,100) %></td>
+      <% end %>
+    <td>名前<%= user.name %></td>
+    <td>自己紹介<%= user.introduction %></td>
+  </tr>
+  <% end %>
+</table>
